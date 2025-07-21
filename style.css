@@ -12,28 +12,57 @@ body {
     align-items: center;
     padding: 0px;
     margin: 0px;
+    background-color: rgba(4, 132, 252, 0.781);
 }
 #col1{
-    background-color: red;
+    background-color: rgb(255, 0, 0);
     margin: 0 0;
     flex: 1;
-    height: auto;
-    padding: 2%;
-    text-align: center;
+    height: 20vh; 
+    padding: 0vw 2vw;
+    
 }
 #col2{
     background-color: green;
     margin: 0 0;
-    flex: 1;
-    height: auto;
-    padding: 2%;
-    text-align: center;
+    flex: 2;
+    height: 20vh; 
+    padding: 0vw 2vw;
+    text-align: left;
+  
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-end; /* Push content to the bottom */
 }
 #col3{
     background-color: blue;
     margin: 0 0;
     flex: 1;
-    height: auto;
-    padding: 2%;
+    height: 20vh;
+    padding: 0vw 2vw;
     text-align: center;
+}
+#col1 img {
+    max-height: 20vh; /* Ensure the image doesn't exceed the width of the parent div */
+    display: block; /* Remove any inline spacing caused by the image */
+    
+    
+}
+#row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure it spans the full width of the parent */
+}
+#row2 a{
+    
+   background-color: rgb(135, 26, 150);
+    padding: 0.5vw 5vw;
+    margin: 0 0.1vw;
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set link color */
+    border-radius: .5vw; 
+}
+a{
+    font-size: 4vh;
 }
