@@ -1,17 +1,40 @@
 @font-face {
-  font-family: MyFont;
-  src: url ('fonts/Header.ttf') format('truetype');
+  font-family: 'MyFont';
+  src: url('./fonts/Wood\ Block\ CG\ Regular.otf');
   font-weight: normal;
   font-style: normal;
+  
+}
+
+:root{
+    --primary-color: #005bea;
+    --secondary-color: #ffd700;
+    --text-color: white;
+    --background-color: white;
+    
+}
+.dark-mode {
+  --primary-color: #b31414;
+  --text-color: #e0e0e0;
+  --background-color: #100E09;
+
+  background-image: url('Images/Dark Blood Wallpaper.jpg');
+  background-size: cover;
 }
 
 /* style.css */ 
 body {
     margin: 0; /* Remove default margin */
+    margin-top: ;
     padding: 0; /* Remove default padding */
     box-sizing: border-box; /* Ensure consistent box-sizing */
+    background-color: var(--background-color); /* Set background color */
+    background-image: url('Images/whitebg.jpg');
+    background-size: cover;
 }
 .container {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.452), rgba(255, 255, 255, 0));
+    background-color:var(--primary-color); 
     margin: 0px;
     margin-top: 3vh; /* Add margin to the top of the container */   ;
     display: flex;
@@ -19,10 +42,9 @@ body {
     justify-content:center;
     align-items: center;
     padding: 0px;
-    background-color:#005bea; 
 }
 #col1{
-    background-color: rgba(255, 0, 0, 0.452);
+    background-color: rgba(32, 24, 24, 0);
     margin: 0 0;
     flex: 1;
     height: 20vh; 
@@ -44,11 +66,12 @@ body {
     align-items: center; /* Center content horizontally */
     justify-content: center;  /* Horizontal centering */
     justify-content: flex-end; /* Push content to the bottom */
+    margin-left: 3vw;
 }
 #col2 h1 {
     margin: 0 0; /* Remove default margin */
     font-size: 8vh; /* Adjust font size as needed */
-    font-family: MyFont, sans-serif; /* Use a distinctive font */
+    font-family: 'MyFont', sans-serif; /* Use a distinctive font */
     color: white; /* Set text color */
     text-align: center; /* Center the text */
     line-height: 1; /* Ensure no extra spacing around the text */
@@ -56,17 +79,30 @@ body {
 display: block;
 }
 #col3{
-    background-color: rgba(0, 255, 34, 0.479);
     margin: 0 0;
     flex: 1;
     height: 20vh;
     padding: 0vw 2vw;
     text-align: center;
+    display: flex; /* Enable Flexbox */
+    flex-direction: row; /* Arrange children in a row */
+    align-items: center;
+    
+}
+#col3 img {
+  padding: 1vw 1vh;
+  width: 6vh; 
+  height: fit-content;
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+#col3 button {
+ height: fit-content;width:8vh;
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
 #col1 img {
     display: block; /* Remove any inline spacing caused by the image */
-    height: 20vh; /* Set a fixed height */
-    width: 10vw; /* Maintain aspect ratio */
+    height: 20vh  ; /* Set a fixed height */
+    width: fit-content; /* Maintain aspect ratio */
     margin-left: auto;
     margin-right: auto;
  
@@ -94,7 +130,7 @@ display: block;
     transition: background-color 0.3s ease, color 0.3s ease
 }
 #row2 a:hover {    
-    background-color:#024ec9;     color: white; /* Change text color on hover */
+    background-color:#00000021;     color: white; /* Change text color on hover */
     cursor: pointer; /* Change cursor to pointer on hover */
 }
 
@@ -109,17 +145,18 @@ display: block;
         width: 100%; /* Ensure full width on smaller screens */
     }
 
-    #col1 img {
-        max-height: 15vh; /* Scale the logo for smaller screens */
-        width: auto; /* Maintain aspect ratio */
-        height: 20vh; /* Set a fixed height */
-        width: 10vw; /* Maintain aspect ratio */
-    }
     #row2 a{
     
         padding: 0.7vw 3vw; /* Adjust padding for smaller screens */
         font-size: 1.9vh; /* Adjust font size for smaller screens */
     }
+    #col3{
+        justify-content: center; /* Center content horizontally */
+    } 
+    #logo {
+      display: none; /* Hide the logo on small screens */
+    }
+    
 }
 /* Search bar css */
 *{
@@ -130,16 +167,15 @@ display: block;
     ;
   }
   .srchcard{
-    margin: 3vh 0px;
     padding-bottom: 5vh;
     width: 100%;
     height: 1vh;
     margin-bottom: 2vh;
-    margin-top: 0.5vh;
   }
   .srchform{
     display:flex;
-  
+    
+    
     width: 100%;
   }
   .srch{
@@ -159,6 +195,7 @@ display: block;
     height: 6vh;
     width: 6vh;
     margin: auto;
+    margin-right: 0;
     background-color: transparent;
   
   
@@ -210,9 +247,9 @@ display: block;
     top: 0;
     left: 0;
     width: 100%;
-    background: #ffd700;
+    background: var(--secondary-color);
     color: black;
-    padding: 4px 0; /* Adds padding to the top and bottom */
+    padding: auto 0; /* Adds padding to the top and bottom */
     text-align: center;
     align-items: center;
     font-weight: bolder;
@@ -229,6 +266,11 @@ display: block;
     padding-left: 100%; /* Starts off-screen */
     animation: scroll 20s linear infinite;
   }
+  button{
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
   @keyframes scroll {
     0% {
       transform: translateX(0);
@@ -238,10 +280,48 @@ display: block;
     }
   }
 
-  @font-face {
-    font-family: 'Shaxizor';
-    src: url('fonts/SHAXIZOR.TTF') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  /* Dark mode toggle button */
+  #theme-switch img {
+    
+    cursor: pointer;
+    display: none; /* Hide both images initially */
+  } 
+  #theme-switch img:first-child {
+    display: block; /* Show light mode icon by default */
+  }
+  .dark-mode #theme-switch img:first-child {
+    display: none; /* Hide light mode icon in dark mode */
+  }
+  .dark-mode #theme-switch img:last-child {
+    display: block; /* Show dark mode icon in dark mode */
   }
   
+
+
+  #logo img {
+    
+    cursor: pointer;
+    display: none; /* Hide both images initially */
+  } 
+  #logo img:first-child {
+    display: block; /* Show light mode icon by default */
+  }
+  .dark-mode #logo img:first-child {
+    display: none; /* Hide light mode icon in dark mode */
+  }
+  .dark-mode #logo img:last-child {
+    display: block; /* Show dark mode icon in dark mode */
+  }
+
+/* Dark mode transition */
+body,
+.container,
+#col1,
+#col2,
+#col3,
+#row2 a,
+#srch,
+#srchlist,
+.announcement-bar {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}

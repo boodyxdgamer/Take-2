@@ -1,67 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Website Project</title>
     <link rel="stylesheet" href="style.css">
+    <script src="Theme-switch.js" defer></script>
+</head>
+ <!-- Announcement Bar -->
+ <div class="announcement-bar">
+  <div class="scrolling-text">
+    🚨Limited Time Offer: 15% Off All Controllers! Use Code: <strong>INVINCIBLE15</strong>
+  </div>
+</div>
+<header class ="container">
+  <div id ="col1">
+     
+         <a href="index.html" id = 'logo'> <img src="Images/favicon.png" alt="light Logo"><img src="Images/omni_man.png" alt="light Logo"></a>
+     
+  </div>
+  <div id ="col2">
+    <a href="index.html" style=  "text-decoration: none;"> <h1>INVICNCIBLE Store</h1></a>
+      <!-- Search -->
+
+  <div class="srchcard">
+    <form class="srchform">
+      <input
+      type="text"
+      name="query"
+      class="srch"
+      placeholder="Search a product..."
+      id="srch"
+      autocomplete="on"
+      oninput="search()"
+      />
+      <input type="image" src="./Images/icons8-search-50.png" alt="search" class="srchbutton" name="SearchButton" />
+      <ul id="srchlist" style="display: none;">
+        <li onclick="redirectToPage('accessories1.html')">PlayStation 5 Controller</li>
+        <li onclick="redirectToPage('accessories2.html')">Controller Charging Station</li>
+        <li onclick="redirectToPage('accessories3.html')">PlayStation VR2</li>
+        <li onclick="redirectToPage('console.html')">PlayStation 5 Slim</li>
+        <li onclick="redirectToPage('console2.html')">PlayStation 5 Pro</li>
+        <li onclick="redirectToPage('console3.html')">Xbox</li>
+        <li onclick="redirectToPage('game1.html')">FC 25</li>
+        <li onclick="redirectToPage('game2.html')">Rocket League</li>
+        <li onclick="redirectToPage('game3.html')">Red Dead Redemption 2</li>
+      </ul>
+    </form>
+  </div>
+
+      <div id="row2">
+      <a>Home</a>
+      <a>About us</a>
+      <a>Contact us</a>  
+      <a>Products</a>  
+      </div>    
+  </div >
+  
+  <div id= "col3">
+      <button ><img src="Images/user.png" alt="account" id="avatar"></button>
+      <button id="theme-switch" ><img src="Images/night-mode.png" alt="Dark Mode" ><img src="Images/brightness.png" alt="Light Mode" ></button>
+      <button ><img src="Images/shopping-cart.png" alt="Cart" id="cart"></button>
+
+    </div>
+</header>
+<body >
+  
 
     
-</head>
-<body>
-     <!-- Announcement Bar -->
-     <div class="announcement-bar">
-        <div class="scrolling-text">
-          🚨Limited Time Offer: 15% Off All Controllers! Use Code: <strong>INVINCIBLE15</strong>
-        </div>
-      </div>
-    <header class ="container">
-        <div id ="col1">
-           
-                <img src="logo.png" alt="Logo">
-           
-        </div>
-        <div id ="col2">
-            <h1>INVICNCIBLE</h1>
-            <!-- Search -->
-
-        <div class="srchcard">
-          <form class="srchform">
-            <input
-            type="text"
-            name="query"
-            class="srch"
-            placeholder="Search a product..."
-            id="srch"
-            autocomplete="on"
-            oninput="search()"
-            />
-            <input type="image" src="./Images/icons8-search-50.png" alt="search" class="srchbutton" name="SearchButton" />
-            <ul id="srchlist" style="display: none;">
-              <li onclick="redirectToPage('accessories1.html')">PlayStation 5 Controller</li>
-              <li onclick="redirectToPage('accessories2.html')">Controller Charging Station</li>
-              <li onclick="redirectToPage('accessories3.html')">PlayStation VR2</li>
-              <li onclick="redirectToPage('console.html')">PlayStation 5 Slim</li>
-              <li onclick="redirectToPage('console2.html')">PlayStation 5 Pro</li>
-              <li onclick="redirectToPage('console3.html')">Xbox</li>
-              <li onclick="redirectToPage('game1.html')">FC 25</li>
-              <li onclick="redirectToPage('game2.html')">Rocket League</li>
-              <li onclick="redirectToPage('game3.html')">Red Dead Redemption 2</li>
-            </ul>
-          </form>
-        </div>
-  
-            <div id="row2">
-            <a>Home</a>
-            <a>About us</a>
-            <a>Contact us</a>  
-            <a>Products</a>  
-            </div>    
-        </div >
-        
-        <div id= "col3">
-            <p> box3</p>
-            
-        </div>
-    </header>
 </body>
 </html>
