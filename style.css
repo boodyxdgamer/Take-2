@@ -1,4 +1,10 @@
-    
+@font-face {
+  font-family: MyFont;
+  src: url ('fonts/Header.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* style.css */ 
 body {
     margin: 0; /* Remove default margin */
@@ -16,13 +22,14 @@ body {
     background-color:#005bea; 
 }
 #col1{
-    background-color: rgba(255, 0, 0, 0);
+    background-color: rgba(255, 0, 0, 0.452);
     margin: 0 0;
     flex: 1;
     height: 20vh; 
     padding: 0vw 1vw;
     display: flex; /* Enable Flexbox */
-    justify-content: left; /* Center horizontally */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-end; /* Push content to the bottom */
 }
 
 #col2{
@@ -35,12 +42,13 @@ body {
     flex-direction: column; /* Stack children vertically */
     justify-content: flex-end; /* Push content to the bottom */
     align-items: center; /* Center content horizontally */
-
-
+    justify-content: center;  /* Horizontal centering */
+    justify-content: flex-end; /* Push content to the bottom */
 }
 #col2 h1 {
     margin: 0 0; /* Remove default margin */
-    font-size: 3vh; /* Adjust font size as needed */
+    font-size: 8vh; /* Adjust font size as needed */
+    font-family: MyFont, sans-serif; /* Use a distinctive font */
     color: white; /* Set text color */
     text-align: center; /* Center the text */
     line-height: 1; /* Ensure no extra spacing around the text */
@@ -48,7 +56,7 @@ body {
 display: block;
 }
 #col3{
-    background-color: rgba(0, 0, 255, 0);
+    background-color: rgba(0, 255, 34, 0.479);
     margin: 0 0;
     flex: 1;
     height: 20vh;
@@ -56,10 +64,12 @@ display: block;
     text-align: center;
 }
 #col1 img {
-    max-height: 20vh; /* Ensure the image doesn't exceed the width of the parent div */
     display: block; /* Remove any inline spacing caused by the image */
-    
-    
+    height: 20vh; /* Set a fixed height */
+    width: 10vw; /* Maintain aspect ratio */
+    margin-left: auto;
+    margin-right: auto;
+ 
 }
 #row2{
     display: flex;
@@ -73,13 +83,12 @@ display: block;
 }
 #row2 a{
     
-    background-color:#ea0081; 
-    padding: 0.7vw 5.5vw;
-    margin: 0 0.01vw;
+    padding: 1vh 5vw; /* Adjust padding for better clickability */
+    margin: 0 0.01vw; /* Space between buttons */
     text-decoration: none; /* Remove underline from links */
     color: rgb(255, 255, 255); /* Set link color */
     border-radius: .5vw; 
-    font-size: 2.3vh;
+    font-size: 2.3vh; /* Adjust font size as needed */
     font-weight: bold; /* Make the text bold */
     font-family: poppins, sans-serif; /* Use a sans-serif font for better readability */
     transition: background-color 0.3s ease, color 0.3s ease
@@ -96,13 +105,15 @@ display: block;
     }
 
     #col1, #col2, #col3 {
-        height: auto; /* Allow the height to adjust based on content */
+        height: 100%; /* Allow the height to adjust based on content */
         width: 100%; /* Ensure full width on smaller screens */
     }
 
     #col1 img {
         max-height: 15vh; /* Scale the logo for smaller screens */
         width: auto; /* Maintain aspect ratio */
+        height: 20vh; /* Set a fixed height */
+        width: 10vw; /* Maintain aspect ratio */
     }
     #row2 a{
     
@@ -123,6 +134,8 @@ display: block;
     padding-bottom: 5vh;
     width: 100%;
     height: 1vh;
+    margin-bottom: 2vh;
+    margin-top: 0.5vh;
   }
   .srchform{
     display:flex;
@@ -223,5 +236,12 @@ display: block;
     100% {
       transform: translateX(-100%); /* Moves left */
     }
+  }
+
+  @font-face {
+    font-family: 'Shaxizor';
+    src: url('fonts/SHAXIZOR.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
   }
   
