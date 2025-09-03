@@ -25,7 +25,6 @@
 /* style.css */ 
 body {
     margin: 0; /* Remove default margin */
-    margin-top: ;
     padding: 0; /* Remove default padding */
     box-sizing: border-box; /* Ensure consistent box-sizing */
     background-color: var(--background-color); /* Set background color */
