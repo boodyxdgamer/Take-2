@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Website Project</title>
     <link rel="stylesheet" href="style.css">
     <script src="Theme-switch.js" defer></script>
+    <script src="slider.js" defer></script>
 </head>
+<body >
  <!-- Announcement Bar -->
  <div class="announcement-bar">
   <div class="scrolling-text">
@@ -57,14 +59,26 @@
   </div >
   
   <div id= "col3">
-      <button ><img src="Images/user.png" alt="account" id="avatar"></button>
-      <button id="theme-switch" ><img src="Images/night-mode.png" alt="Dark Mode" ><img src="Images/brightness.png" alt="Light Mode" ></button>
-      <button ><img src="Images/shopping-cart.png" alt="Cart" id="cart"></button>
+      <button class="Nav-button" ><img src="Images/user.png" alt="account" id="avatar"></button>
+      <button class="Nav-button" id="theme-switch" ><img src="Images/night-mode.png" alt="Dark Mode" ><img src="Images/brightness.png" alt="Light Mode" ></button>
+      <button class="Nav-button" ><img src="Images/shopping-cart.png" alt="Cart" id="cart"></button>
 
     </div>
 </header>
-<body >
-  
+
+
+  <div class="slider" >
+    <div class = "slides" style="background-color: rgba(255, 255, 255, 0);">
+   
+      <img class="slide" src="Images/Banner4.jpg" alt="img1">
+      <img class="slide" src="Images/Banner5.jpg" alt="img2">
+      <img class="slide" src="Images/Banner6.png" alt="img3">
+    </div>
+    
+    <button class = "prev"  onclick="previousSlide()">&#10094</button>
+    <button class = "next"  onclick="nextSlide()" >&#10095</button>
+    
+  </div>
 
     
 </body>
