@@ -51,75 +51,34 @@
         <li onclick="redirectToPage('Product.html?category=games&product=1')">Rocket League</li>
         <li onclick="redirectToPage('Product.html?category=games&product=2')">Red Dead Redemption 2</li>
       </ul>
-      
-      
     </form>
   </div>
 
-      <div id="row2">
-        <a href="index.html">Home</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="feedback.html">Contact Us</a>
-        <a href="products.html">Products</a>
-        
-   
-     
-      </div>    
+    <div id="row2">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="feedback.html">Contact Us</a>
+      <a href="products.html">Products</a>
+    </div>    
   </div >
   
   <div id= "col3">
-      <button class="Nav-button" ><img src="Images/user.png" alt="account" id="avatar" onclick="window.location.href='login.html'"></button>
+      <button class="Nav-button" ><img src="Images/user.png" alt="account" id="avatar"></button>
       <button class="Nav-button" id="theme-switch" ><img src="Images/night-mode.png" alt="Dark Mode" ><img src="Images/brightness.png" alt="Light Mode" ></button>
       <button class="Nav-button" ><img src="Images/shopping-cart.png" alt="Cart" id="cart"></button>
-      
+
     </div>
-    <h2 style="
-        font-size:   1.3rem;
-        position: absolute;
-        right: 20px;
-        top: 19%;
-        "id="greeting">Hi, User!</h2>
 </header>
-<main>
-  <!-- Main Content -->
-  <h1 class="heading">Featured Products</h1>
-  <section style="text-align: center;">
-    <!-- Consoles -->
-    <div class="catigory">
-      <h2 class="homeh2">Consoles</h2>
-      <a href="Category.html?category=consoles">
-        <img src="./Images/Console.png" alt="Console" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=consoles'">
-        Show Products
-      </button>
-    </div>
-
-    <!-- Accessories -->
-    <div class="catigory">
-      <h2 class="homeh2">Accessories</h2>
-      <a href="Category.html?category=accessories">
-        <img src="./Images/Accessories.png" alt="Accessories" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=accessories'">
-        Show Products
-      </button>
-    </div>
-
-    <!-- Games -->
-    <div class="catigory">
-      <h2 class="homeh2">Games</h2>
-      <a href="Category.html?category=games">
-        <img src="./Images/Games.png" alt="Games" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=games'">
-        Show Products
-      </button>
-    </div>
-
-  </section>
-</main>
-
+    <main>
+    <!-- Main Content -->
+    <section style="text-align: center;">
+      <div id="products"></div>
+    </section>
+    
+  </main>
+  
+   
+ 
 <footer class="footer">
   <p class="footer-text">© 2025 E-Shop. All rights reserved.</p>
   <div class="social-links">
@@ -129,6 +88,20 @@
   </div>
 </footer>
 
-    
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category");
+
+    if (category) {
+      store.renderCategory(category, "products");
+    } else {
+      document.getElementById("products").innerHTML = "<p>No category selected.</p>";
+    }
+  });
+</script>
+
+  
 </body>
 </html>

@@ -8,6 +8,11 @@
     <script src="slider.js" defer></script>
     <script src="backend.js" defer></script>
     <script src="Products.js" defer></script>
+    <link rel ="icon" type="image/png" href="images/favicon.png" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 <body >
  <!-- Announcement Bar -->
@@ -51,8 +56,6 @@
         <li onclick="redirectToPage('Product.html?category=games&product=1')">Rocket League</li>
         <li onclick="redirectToPage('Product.html?category=games&product=2')">Red Dead Redemption 2</li>
       </ul>
-      
-      
     </form>
   </div>
 
@@ -61,74 +64,78 @@
         <a href="aboutus.html">About Us</a>
         <a href="feedback.html">Contact Us</a>
         <a href="products.html">Products</a>
-        
-   
      
       </div>    
   </div >
   
   <div id= "col3">
-      <button class="Nav-button" ><img src="Images/user.png" alt="account" id="avatar" onclick="window.location.href='login.html'"></button>
+      <button class="Nav-button" ><img src="Images/user.png" alt="account" id="avatar"></button>
       <button class="Nav-button" id="theme-switch" ><img src="Images/night-mode.png" alt="Dark Mode" ><img src="Images/brightness.png" alt="Light Mode" ></button>
       <button class="Nav-button" ><img src="Images/shopping-cart.png" alt="Cart" id="cart"></button>
-      
+
     </div>
-    <h2 style="
-        font-size:   1.3rem;
-        position: absolute;
-        right: 20px;
-        top: 19%;
-        "id="greeting">Hi, User!</h2>
 </header>
-<main>
-  <!-- Main Content -->
-  <h1 class="heading">Featured Products</h1>
-  <section style="text-align: center;">
-    <!-- Consoles -->
-    <div class="catigory">
-      <h2 class="homeh2">Consoles</h2>
-      <a href="Category.html?category=consoles">
-        <img src="./Images/Console.png" alt="Console" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=consoles'">
-        Show Products
-      </button>
-    </div>
 
-    <!-- Accessories -->
-    <div class="catigory">
-      <h2 class="homeh2">Accessories</h2>
-      <a href="Category.html?category=accessories">
-        <img src="./Images/Accessories.png" alt="Accessories" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=accessories'">
-        Show Products
-      </button>
-    </div>
 
-    <!-- Games -->
-    <div class="catigory">
-      <h2 class="homeh2">Games</h2>
-      <a href="Category.html?category=games">
-        <img src="./Images/Games.png" alt="Games" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=games'">
-        Show Products
-      </button>
-    </div>
+    <br>
+    <div class="contact">
+        <h2 class="feedbackh2">Contact us</h2>
+        <div class="contact-info">
+            <ul>
+              <li>Customer Services: 01000000000</li>
+              <li>Customer Services Email: wecare@INVINCIBLE.com</li>
+              <li>
+                Socials:
+                <a href="https://www.facebook.com/invincible.store.2025" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/invincible_store321/" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="feedback.html" target="_blank">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          
+          
+      </div>
+      <div id ="contact-form">
+        <form onsubmit="alert('Thank you! Your message has been submitted.'); return false;">
 
-  </section>
-</main>
+            <label for="name"></label><br>
+            <input type="text" id="name" name="name" placeholder="Name" required><br>
 
-<footer class="footer">
-  <p class="footer-text">© 2025 E-Shop. All rights reserved.</p>
-  <div class="social-links">
-    <a href="https://www.facebook.com/invincible.store.2025" class="social-link" target="_blank">Facebook</a>
-    <a href="https://www.instagram.com/invincible_store321/" class="social-link" target="_blank">Instagram</a>
-    <a href="feedback.html" class="social-link" target="_blank">Contact Us</a>
-  </div>
-</footer>
+            <label for="email"></label><br>
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
 
-    
+            <label for="phone_number"></label><br>
+            <input type="tel" id="phone_number" name="phone_number" placeholder="Phone Number" required><br>
+        
+            <label for="subject"></label><br>
+            <input type="text" id="subject" name="subject" placeholder="Contact subject"required><br>
+
+            <label for="message"></label><br>
+            <textarea id="message" name="message" placeholder="Message"required></textarea><br>
+
+            <input type="submit" value="Send" >  
+        
+          </form>
+        </div>
+      </div>
+      <footer class="footer" type = "footer"> 
+        <p class="footer-text">© 2025 E-Shop. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/invincible.store.2025" class="social-link" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/invincible_store321/" class="social-link" target="_blank">Instagram</a>
+            <a href="feedback.html" class="social-link" target="_blank">contact us</a>
+        
+        </div>
+    </footer>
+ 
+
 </body>
 </html>
+

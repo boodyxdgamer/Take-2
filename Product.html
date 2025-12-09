@@ -51,8 +51,6 @@
         <li onclick="redirectToPage('Product.html?category=games&product=1')">Rocket League</li>
         <li onclick="redirectToPage('Product.html?category=games&product=2')">Red Dead Redemption 2</li>
       </ul>
-      
-      
     </form>
   </div>
 
@@ -61,63 +59,45 @@
         <a href="aboutus.html">About Us</a>
         <a href="feedback.html">Contact Us</a>
         <a href="products.html">Products</a>
-        
-   
      
       </div>    
   </div >
   
   <div id= "col3">
-      <button class="Nav-button" ><img src="Images/user.png" alt="account" id="avatar" onclick="window.location.href='login.html'"></button>
+      <button class="Nav-button" ><img src="Images/user.png" alt="account" id="avatar"></button>
       <button class="Nav-button" id="theme-switch" ><img src="Images/night-mode.png" alt="Dark Mode" ><img src="Images/brightness.png" alt="Light Mode" ></button>
       <button class="Nav-button" ><img src="Images/shopping-cart.png" alt="Cart" id="cart"></button>
-      
+
     </div>
-    <h2 style="
-        font-size:   1.3rem;
-        position: absolute;
-        right: 20px;
-        top: 19%;
-        "id="greeting">Hi, User!</h2>
 </header>
 <main>
-  <!-- Main Content -->
-  <h1 class="heading">Featured Products</h1>
-  <section style="text-align: center;">
-    <!-- Consoles -->
-    <div class="catigory">
-      <h2 class="homeh2">Consoles</h2>
-      <a href="Category.html?category=consoles">
-        <img src="./Images/Console.png" alt="Console" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=consoles'">
-        Show Products
-      </button>
-    </div>
+ 
 
-    <!-- Accessories -->
-    <div class="catigory">
-      <h2 class="homeh2">Accessories</h2>
-      <a href="Category.html?category=accessories">
-        <img src="./Images/Accessories.png" alt="Accessories" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=accessories'">
-        Show Products
-      </button>
+<div>
+    <div class="d11g">
+    <img class="main" src="" >
     </div>
-
-    <!-- Games -->
-    <div class="catigory">
-      <h2 class="homeh2">Games</h2>
-      <a href="Category.html?category=games">
-        <img src="./Images/Games.png" alt="Games" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=games'">
-        Show Products
-      </button>
-    </div>
-
-  </section>
+    <div class="d2">
+          <!--edited to send data to checkout page by abdelrahman-->
+          <form action="checkout.html" method="GET">
+            <h1 id="productName"></h1>
+            <p id="company"></p>
+            <hr>
+            <p id="price"></p>
+          
+            <label for="num">Quantity:</label>
+            <input type="number" id="num" name="quantity" min="1" value="1" class="input" required>
+          
+            <!-- Hidden field that will be filled with product name -->
+            <input type="hidden" name="product" id="hiddenProductName">
+          
+            <br>
+            <button class="but" type="submit">ORDER NOW</button>
+          </form>
+          
+           </div>
+       </div>      
+</div>
 </main>
 
 <footer class="footer">
@@ -129,6 +109,41 @@
   </div>
 </footer>
 
-    
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category");
+  const productIndex = parseInt(params.get("product"), 10);
+
+  if (category && !isNaN(productIndex)) {
+    const product = store.getCategory(category)[productIndex];
+
+    if (product) {
+      // Update image
+      const img = document.querySelector(".main");
+      img.src = product.image;
+      img.alt = product.name;
+
+      // Update name
+      document.getElementById("productName").textContent = product.name;
+
+      // Update company
+      document.getElementById("company").textContent = product.company;
+
+      // Update price
+      document.getElementById("price").innerHTML =
+        `Price: <strong style="color: red;">${product.salePrice} EGP</strong> <del class="deld">${product.normalPrice} EGP</del>`;
+
+      // Update stock limit for quantity input
+      document.getElementById("num").max = product.stock;
+
+      // ✅ Hidden input for checkout
+      document.getElementById("hiddenProductName").value = product.name;
+    }
+  }
+});
+
+  </script>
+  
 </body>
 </html>

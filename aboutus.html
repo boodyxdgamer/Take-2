@@ -51,8 +51,6 @@
         <li onclick="redirectToPage('Product.html?category=games&product=1')">Rocket League</li>
         <li onclick="redirectToPage('Product.html?category=games&product=2')">Red Dead Redemption 2</li>
       </ul>
-      
-      
     </form>
   </div>
 
@@ -61,74 +59,66 @@
         <a href="aboutus.html">About Us</a>
         <a href="feedback.html">Contact Us</a>
         <a href="products.html">Products</a>
-        
-   
      
       </div>    
   </div >
   
   <div id= "col3">
-      <button class="Nav-button" ><img src="Images/user.png" alt="account" id="avatar" onclick="window.location.href='login.html'"></button>
+      <button class="Nav-button" ><img src="Images/user.png" alt="account" id="avatar"></button>
       <button class="Nav-button" id="theme-switch" ><img src="Images/night-mode.png" alt="Dark Mode" ><img src="Images/brightness.png" alt="Light Mode" ></button>
       <button class="Nav-button" ><img src="Images/shopping-cart.png" alt="Cart" id="cart"></button>
-      
+
     </div>
-    <h2 style="
-        font-size:   1.3rem;
-        position: absolute;
-        right: 20px;
-        top: 19%;
-        "id="greeting">Hi, User!</h2>
 </header>
-<main>
-  <!-- Main Content -->
-  <h1 class="heading">Featured Products</h1>
-  <section style="text-align: center;">
-    <!-- Consoles -->
-    <div class="catigory">
-      <h2 class="homeh2">Consoles</h2>
-      <a href="Category.html?category=consoles">
-        <img src="./Images/Console.png" alt="Console" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=consoles'">
-        Show Products
-      </button>
+      <main class="content">
+          <!-- Music Player -->
+  <div class="music-container">
+    <video id="music" controls autoplay loop >
+        <source src="music.mp3" type="audio/mp3" >
+        Your browser does not support the audio element.
+    </video>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      const audio = document.getElementById("music");
+  
+      // Set volume to 50% (0.5)
+      audio.volume = 0.2;
+  });
+  </script>
+          <h1 class="heading">About Us</h1>
+          <p class="heading">Meet the amazing team behind this project!</p>
+  
+  <hr>
+          <!-- WORKSHEET Table -->
+          <table border="1" class="worksheet-table">
+           
+                  <tr>
+                      <th class="names">Name</th>
+                      <th>Role</th>
+                  </tr>
+                  <tr><td class="names"><pre>Abdelrahman</pre></td><td><pre>Home ,products and aboutus pages+ adjustments in other pages</pre></td></tr>
+                  <tr><td class="names"><pre>Mohamed</pre></td><td><pre>Contact us and feedback page</pre></td></tr>
+                  <tr><td class="names"><pre>Omar</pre></td><td><pre>Delivery page & All themes & Theme button</pre></td></tr>
+                  <tr><td class="names"><pre>Al-Baraa</pre></td><td><pre>Products pages & categories pages</pre></td></tr>
+                  <tr><td class="names"><pre>Eyad</pre></td><td><pre>Navigation bar</pre></td></tr>
+                  <tr><td class="names"><pre>Belal</pre></td><td><pre>Search and search page</pre></td></tr>
+                  <tr><td class="names"><pre>Amr</pre></td><td><pre>registeration page</pre></td></tr>
+                  <tr><td class="names"><pre>Abdelghani</pre></td><td><pre>Login and login functions</pre></td></tr>
+             
+          </table>
+
+      </main>
     </div>
-
-    <!-- Accessories -->
-    <div class="catigory">
-      <h2 class="homeh2">Accessories</h2>
-      <a href="Category.html?category=accessories">
-        <img src="./Images/Accessories.png" alt="Accessories" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=accessories'">
-        Show Products
-      </button>
-    </div>
-
-    <!-- Games -->
-    <div class="catigory">
-      <h2 class="homeh2">Games</h2>
-      <a href="Category.html?category=games">
-        <img src="./Images/Games.png" alt="Games" class="catigory-img" />
-      </a>
-      <button class="shopbutton" onclick="window.location.href='Category.html?category=games'">
-        Show Products
-      </button>
-    </div>
-
-  </section>
-</main>
-
-<footer class="footer">
-  <p class="footer-text">© 2025 E-Shop. All rights reserved.</p>
-  <div class="social-links">
-    <a href="https://www.facebook.com/invincible.store.2025" class="social-link" target="_blank">Facebook</a>
-    <a href="https://www.instagram.com/invincible_store321/" class="social-link" target="_blank">Instagram</a>
-    <a href="feedback.html" class="social-link" target="_blank">Contact Us</a>
-  </div>
-</footer>
-
-    
-</body>
-</html>
+      <!-- Footer -->
+      <footer class="footer">
+          <p class="footer-text">© 2025 E-Shop. All rights reserved.</p>
+          <div class="social-links">
+              <a href="https://www.facebook.com/invincible.store.2025" class="social-link" target="_blank">Facebook</a>
+              <a href="https://www.instagram.com/invincible_store321/" class="social-link" target="_blank">Instagram</a>
+              <a href="feedback.html" class="social-link" target="_blank">Contact Us</a>
+          </div>
+      </footer>
+  
+  </body>
+  </html>

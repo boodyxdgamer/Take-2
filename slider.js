@@ -13,7 +13,7 @@ function initializeSlider() {
 
     if (slides.length > 0) {
     slides[Index].classList.add('displaySlide');
-    IntervalID = setInterval(nextSlide, 1000);
+    IntervalID = setInterval(nextSlide, 3000);
     }
 }
 
@@ -30,14 +30,15 @@ function showSlide(i) {
 }
 
 function nextSlide() {
-    clearInterval(IntervalID);
+   
     Index++;
     showSlide(Index);
+    
 }
 
 function previousSlide() {
-    clearInterval(IntervalID);
+    
     Index--;
     showSlide(Index);
-
+    clearInterval(IntervalID);
 }
